@@ -41,17 +41,18 @@ body{
    display: flex;
    align-items: center;
    justify-content: center;
-   padding-bottom: 50px;
+   
+   /*background-color: green;*/
    /*background-image:url('images/bgimg.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;*/
-   height: 100vh;
+   /*height: 100vh;*/
    overflow: hidden;
 }
 @media(min-width: 600px){
    .container{
-      padding: 0 10%;
+      padding: 50px 10%;
    }
 }
 
@@ -118,9 +119,9 @@ body{
 .logo{
    /*position: absolute;
    top: 10px;
-   left: 0;*/
-   width: 100%;
-   padding-top: 5px;
+   left: 0;
+   width: 100%;*/
+   padding: 5px;
    text-align: center;
 }
 .logo h1{
@@ -136,7 +137,10 @@ body{
    justify-content: center;
    place-items: center;
    align-items: center;
+   width: 100%;
    color: var(--text-cl);
+   padding: 20px 0;
+   /*padding: 50px 0;*/
 }
 .folio-content .icon-pack{
    position: absolute;
@@ -175,7 +179,7 @@ body{
 .folio-content .icon-pack .icon2{
    position: absolute;
    right: -40px;
-   top: 50px;
+   top: 20px;
    border-radius: 10px;
 }
 .folio-content .icon-pack .icon2 div{
@@ -259,7 +263,7 @@ body{
 }*/
 .folio-text{
    text-align: center;
-   padding: 10px 10px;
+   padding: 7px 0;
 }
 .folio-text h2{
    font-weight: 300;
@@ -284,6 +288,7 @@ body{
    padding: 12px;
    border-radius: 20px;
    width: 100px;
+   margin-top: 5px;
    color: #fff;
    background-color: var(--primary-cl);
    border: none;
@@ -324,9 +329,8 @@ body{
    justify-content: center;
    padding: 15px;
    border-radius: 50%;
-   
    border: 1px solid var(--primary-cl);
-   animation: resize 2s linear infinite;
+   /*animation: resize 2s linear infinite;*/
 }
 .folio-content .pic .profile-img{
    width: 180px;
@@ -556,7 +560,6 @@ body.open-nav .navigation .nav-bar .nav-btn{
    padding: 20px;
    /*padding-left: 60px;*/
    background-color: var(--hex-cl);
-   display: none;
 }
 .about-section h2{
    /*position: absolute;
