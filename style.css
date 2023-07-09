@@ -551,15 +551,15 @@ body.open-nav .navigation .nav-bar .nav-btn{
 .about-section{
    /*display: flex;
    align-items: center;*/
-   background-image:url('asset/about.png');
-   background-position-x: -280px;
-   background-position-y: 50%;
+   background-image:url('asset/aboutme2.png');
+   background-position-x: -100px;
+   background-position-y: 70%;
    background-repeat: no-repeat;
-   background-size: 600px;
+   background-size: 300px;
    width: 100%;
    padding: 20px;
    /*padding-left: 60px;*/
-   background-color: var(--hex-cl);
+   /*background-color: var(--hex-cl);*/
 }
 .about-section h2{
    /*position: absolute;
@@ -589,7 +589,7 @@ body.open-nav .navigation .nav-bar .nav-btn{
    padding: 0 10px;
    border-radius: 10px;
    color: #000;
-   background-color: rgba(223, 213, 255, 0.5);
+   background-color: rgba(223, 213, 255, 0.8);
 }
 .about p span{
    font-size: 40px;
