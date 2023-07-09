@@ -139,7 +139,7 @@ body{
    align-items: center;
    width: 100%;
    color: var(--text-cl);
-   padding: 20px 0;
+   padding: 20px 10px;
    /*padding: 50px 0;*/
 }
 .folio-content .icon-pack{
@@ -444,7 +444,7 @@ body.open-nav .nav-bar .nav-content ul{
   font-size: 18px;
 }
 .navigation .nav-bar .nav-btn{
-   position: ;
+   position: fixed;
    bottom: 10px;
    right: 10px;
    display: flex;
