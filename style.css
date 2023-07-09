@@ -444,9 +444,9 @@ body.open-nav .nav-bar .nav-content ul{
   font-size: 18px;
 }
 .navigation .nav-bar .nav-btn{
-   position: absolute;
-   bottom: 5px;
-   right: 5px;
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
