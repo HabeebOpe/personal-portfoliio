@@ -22,7 +22,8 @@ html{
    --text-dcl: #fff;
 }
 body.dark{
-   --body-cl: #181818;
+   --body-cl: #0F0F0F;
+   /*181818*/
    --text-cl: #fff;
    --nex-cl: #1D1D1D;
    --text-dcl: #000;
@@ -55,7 +56,6 @@ body{
       padding: 50px 10%;
    }
 }
-
 .purple1{
    /*display: grid;
    place-self: center;
@@ -64,7 +64,7 @@ body{
    position: fixed;
    border-radius: 50%;
    /* border: 1px solid var(--primary-cl);*/
-   
+   z-index: -1;
   box-shadow: -1px -1px 4px rgba(102, 68, 215, 0.3),
   1px 1px 4px rgba(102, 68, 215, 0.3);
 }
@@ -148,7 +148,6 @@ body{
    height: 250px;
    /*background-color: rgba(226, 209, 255, 0.5);*/
 }
-
 /*.folio-content .icon-pack img{
    position: absolute;
 }*/
@@ -240,10 +239,6 @@ body{
 .icon1, .icon2, .icon3, .icon4{
    background-color: var(--nex-cl);
 }
-
-
-
-
 .folio-content .icon-pack img:nth-child(4){
    right: 15px;
    bottom: 20px;
@@ -263,7 +258,7 @@ body{
 }*/
 .folio-text{
    text-align: center;
-   padding: 7px 0;
+   padding: 15px 0;
 }
 .folio-text h2{
    font-weight: 300;
@@ -288,7 +283,7 @@ body{
    padding: 12px;
    border-radius: 20px;
    width: 100px;
-   margin-top: 5px;
+   margin-top: 10px;
    color: #fff;
    background-color: var(--primary-cl);
    border: none;
@@ -507,21 +502,35 @@ body.open-nav .navigation .nav-bar .nav-btn{
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
-   padding-top: 20px;
+   padding-top: 50px;
 }
 .service ul li{
    width: 250px;
-   padding: 15px;
+   padding: 20px;
    border-radius: 10px;
    text-align: center;
-   margin: 10px 0;
+   margin: 20px 0;
    background-color: var(--body-cl);
    box-shadow:  -5px -1px 8px rgba(102, 68, 215, 0.2),
-         5px 1px 8px rgba(102, 68, 215, 0.2)
+         5px 1px 8px rgba(102, 68, 215, 0.2);
+   position: relative;   
 }
 .service ul li img{
+   position: absolute;
    width: 100px;
    padding: 5px;
+}
+.service ul li:nth-child(1) img{
+   left: -50px;
+   top: -30px;
+}
+.service ul li:nth-child(2) img{
+   left: -50px;
+   top: -30px;
+}
+.service ul li:nth-child(3) img{
+   left: -50px;
+   top: -30px;
 }
 .service ul li h3{
    color: var(--text-cl);
@@ -722,7 +731,7 @@ body.open-nav .navigation .nav-bar .nav-btn{
       width: 32%;
    }
 }
-
+/*
 
 
 .space{
