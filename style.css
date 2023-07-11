@@ -17,7 +17,7 @@ html{
    --body-cl: #fff;
    --nex-cl: #F0F0F8;
    --hex-cl: #E2D1FF;
-   --primary-cl: #5842C3;
+   --primary-cl:#733BD1;
    --text-cl: #000;
    --text-dcl: #fff;
 }
@@ -139,7 +139,7 @@ body{
    align-items: center;
    width: 100%;
    color: var(--text-cl);
-   padding: 20px 0;
+   padding: 20px 10px;
    /*padding: 50px 0;*/
 }
 .folio-content .icon-pack{
@@ -444,9 +444,9 @@ body.open-nav .nav-bar .nav-content ul{
   font-size: 18px;
 }
 .navigation .nav-bar .nav-btn{
-   position: absolute;
-   bottom: 5px;
-   right: 5px;
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
