@@ -687,6 +687,21 @@ body.open-nav .navigation .nav-bar .nav-btn{
       padding: 30px 10%;
    }
 }
+.great{
+   padding: 10px;
+}
+.great h1{
+   color: var(--text-cl);
+}
+.great h1 span{
+   color: var(--primary-cl);
+   font-family: 'Pacifico', cursive
+}
+@media (min-width: 600px){
+   .great{
+      padding: 20px 20%;
+   }
+}
 /*-------------Latest Project------------*/
 .project-section{
    /*display: flex;
@@ -750,6 +765,51 @@ body.open-nav .navigation .nav-bar .nav-btn{
       width: 32%;
    }
 }
+.projects{
+   display: flex;
+   align-items: center;
+   justify-content:  center;
+   padding: 20px 0;
+}
+.projects .proj{
+   width: 300px;
+   height: 300px;
+   padding-left: 30px;
+   padding: 20px;
+   /*display: flex;
+   flex-wrap: wrap;
+   align-items: center;*/
+   border: 2px dashed var(--primary-cl);
+   border-radius: 50%;
+   background-color: var(--body-cl);
+   overflow: hidden;
+}
+.projects .proj h2{
+   padding: 20px;
+   padding-bottom: 0;
+   font-family: 'Pacifico', cursive;
+   color: var(--primary-cl);
+}
+.proj p{
+   color: var(--text-cl);
+}
+.proj div{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 15px;
+   border: 2px dashed var(--primary-cl);
+   border-bottom: none;
+   border-radius: 30px;
+   margin-top: 10px;
+}
+.proj div span i{
+   font-size: 50px;
+   padding: 10px;
+   transform: rotate(-45deg);
+   color: var(--primary-cl)
+}
+
 /*-----------Contact section---------*/
 .contact-section{
    padding: 10px;
