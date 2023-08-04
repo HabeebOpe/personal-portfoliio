@@ -9,6 +9,7 @@
    text-decoration: none;
    scroll-behavior: smooth;
    cursor: none;
+   outline: none;
 }
 html{
    color-scheme: light dark;
@@ -17,12 +18,14 @@ html{
    --body-cl: #fff;
    --nex-cl: #F0F0F8;
    --hex-cl: #E2D1FF;
-   --primary-cl: #5842C3;
+   --primary-cl:#733BD1;
    --text-cl: #000;
    --text-dcl: #fff;
+   --opac: rgba(226, 209, 255, 0.4);
 }
 body.dark{
-   --body-cl: #181818;
+   --body-cl: #0F0F0F;
+   /*181818*/
    --text-cl: #fff;
    --nex-cl: #1D1D1D;
    --text-dcl: #000;
@@ -55,7 +58,6 @@ body{
       padding: 50px 10%;
    }
 }
-
 .purple1{
    /*display: grid;
    place-self: center;
@@ -64,7 +66,7 @@ body{
    position: fixed;
    border-radius: 50%;
    /* border: 1px solid var(--primary-cl);*/
-   
+   z-index: -1;
   box-shadow: -1px -1px 4px rgba(102, 68, 215, 0.3),
   1px 1px 4px rgba(102, 68, 215, 0.3);
 }
@@ -121,11 +123,10 @@ body{
    top: 10px;
    left: 0;
    width: 100%;*/
-   padding: 5px;
    text-align: center;
 }
 .logo h1{
-   font-size: 40px;
+   font-size: 38px;
    font-family: 'Pacifico', cursive;
    -webkit-text-stroke-width: 0.8px;
    -webkit-text-stroke-color: var(--primary-cl);
@@ -139,7 +140,7 @@ body{
    align-items: center;
    width: 100%;
    color: var(--text-cl);
-   padding: 20px 0;
+   padding: 0  10px;
    /*padding: 50px 0;*/
 }
 .folio-content .icon-pack{
@@ -148,14 +149,13 @@ body{
    height: 250px;
    /*background-color: rgba(226, 209, 255, 0.5);*/
 }
-
 /*.folio-content .icon-pack img{
    position: absolute;
 }*/
 .folio-content .icon-pack .icon1{
    position: absolute;
-   left: -35px;
-   top: 10px;
+   left: -40px;
+   top: 20px;
    border-radius: 10px;
    padding: 5px 12px;
 }
@@ -179,7 +179,7 @@ body{
 .folio-content .icon-pack .icon2{
    position: absolute;
    right: -40px;
-   top: 20px;
+   top: 10px;
    border-radius: 10px;
 }
 .folio-content .icon-pack .icon2 div{
@@ -197,8 +197,8 @@ body{
 }
 .folio-content .icon-pack .icon3{
    position: absolute;
-   right: -35px;
-   bottom: 30px;
+   right: -55px;
+   bottom: 35%;
    border-radius: 10px;
    padding: 5px;
 }
@@ -215,7 +215,6 @@ body{
    padding: 0;
    font-size: 12px;
 }
-
 .folio-content .icon-pack .icon4{
    position: absolute;
    left: -35px;
@@ -236,14 +235,29 @@ body{
    padding: 0;
    font-size: 12px;
 }
-
-.icon1, .icon2, .icon3, .icon4{
+.folio-content .icon-pack .icon5{
+   position: absolute;
+   right: -50px;
+   bottom: -5px;
+   border-radius: 10px;
+   padding: 5px;
+}
+.folio-content .icon-pack .icon5 div:first-child{
+   display: flex;
+   align-items: center;
+   justify-items: center;
+}
+.folio-content .icon-pack .icon5 img{
+   width: 15px;
+   margin-right: 5px;
+}
+.folio-content .icon-pack .icon5 p{
+   padding: 0;
+   font-size: 12px;
+}
+.icon1, .icon2, .icon3, .icon4, .icon5{
    background-color: var(--nex-cl);
 }
-
-
-
-
 .folio-content .icon-pack img:nth-child(4){
    right: 15px;
    bottom: 20px;
@@ -263,32 +277,31 @@ body{
 }*/
 .folio-text{
    text-align: center;
-   padding: 7px 0;
+   padding: 15px 0;
 }
 .folio-text h2{
    font-weight: 300;
-   padding: 5px;
-}
+}/*
 .folio-content h2:last-child{
-   margin-top: 50px;
-}
+   margin-top: 10px;
+   color: red;
+}*/
 .folio-content h2 span{
    color: var(--primary-cl);
    /*font-family: 'Pacifico', cursive;*/
    font-weight: 400;
-   font-size: 30px;
+   font-size: 28px;
    font-family: 'Pacifico', cursive;
 }
 .folio-text p{
    font-size: 18px;
    font-weight: lighter;
-   
 }
 .folio-content button{
    padding: 12px;
    border-radius: 20px;
    width: 100px;
-   margin-top: 5px;
+   margin-top: 15px;
    color: #fff;
    background-color: var(--primary-cl);
    border: none;
@@ -305,8 +318,8 @@ body{
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 30px;
-   height: 30px;
+   width: 35px;
+   height: 35px;
    margin: 0 5px;
    border-radius: 50%;
    transition: 0.5s ease;
@@ -324,20 +337,21 @@ body{
    color: var(--text-dcl);
 }
 .folio-content .pic{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 15px;
+   /*display: flex;
+   justify-content: center;*/
+   min-width: 270px;
+   text-align: center;
+   height: 270px;
    border-radius: 50%;
+   
    border: 1px solid var(--primary-cl);
+   overflow: hidden;
+   /*background-color: gold;
    /*animation: resize 2s linear infinite;*/
 }
 .folio-content .pic .profile-img{
-   width: 180px;
-   height: 180px;
-   padding: 10px;
-   border: 2px solid var(--primary-cl);
-   border-radius: 50%;
+   width: 200px;
+   /*border: 2px solid var(--primary-cl);
    /*animation: resize 2s linear infinite;*/
 }
 @keyframes resize{
@@ -373,10 +387,10 @@ body{
       flex-wrap: nowrap;
    }
    .folio-text:first-child{
-      margin-right: 20px;
+      padding-right: 40px;
    }
    .folio-text:last-child{
-      margin-left: 20px;
+      padding-left: 40px;
    }
 }
 /*******  NAVIGATION AREA AND NAV BUTTON.  *******/
@@ -444,9 +458,9 @@ body.open-nav .nav-bar .nav-content ul{
   font-size: 18px;
 }
 .navigation .nav-bar .nav-btn{
-   position: absolute;
-   bottom: 5px;
-   right: 5px;
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -476,9 +490,11 @@ body.open-nav .navigation .nav-bar .nav-btn{
    padding: 20px 10px;
    /*background-color: gold;*/
 }
+.service .service-info{
+   padding-left: 10px;
+}
 .service .service-info h1{
    color: var(--text-cl);
-   padding: 0 10px;
    font-family: 'Pacifico', cursive;
 }
 .service-info h1 span{
@@ -488,7 +504,7 @@ body.open-nav .navigation .nav-bar .nav-btn{
    color: var(--primary-cl);
 }
 .service-info p{
-   padding: 10px;
+   padding: 10px 0;
    font-size: 16px;
    color: var(--text-cl);
 }
@@ -510,18 +526,21 @@ body.open-nav .navigation .nav-bar .nav-btn{
    padding-top: 20px;
 }
 .service ul li{
-   width: 250px;
-   padding: 15px;
+   width: 280px;
+   padding: 20px;
    border-radius: 10px;
    text-align: center;
-   margin: 10px 0;
+   margin: 20px 0;
    background-color: var(--body-cl);
    box-shadow:  -5px -1px 8px rgba(102, 68, 215, 0.2),
-         5px 1px 8px rgba(102, 68, 215, 0.2)
-}
-.service ul li img{
-   width: 100px;
-   padding: 5px;
+         5px 1px 8px rgba(102, 68, 215, 0.2);
+   background-image:url('asset/service.png');
+   background-position-x: -80px;
+   background-position-y: 70%;
+   background-repeat: no-repeat;
+   background-size: 200px;
+   position: relative;   
+   
 }
 .service ul li h3{
    color: var(--text-cl);
@@ -551,15 +570,15 @@ body.open-nav .navigation .nav-bar .nav-btn{
 .about-section{
    /*display: flex;
    align-items: center;*/
-   background-image:url('asset/about.png');
-   background-position-x: -280px;
-   background-position-y: 50%;
+   background-image:url('asset/aboutme2.png');
+   background-position-x: -100px;
+   background-position-y: 70%;
    background-repeat: no-repeat;
-   background-size: 600px;
+   background-size: 300px;
    width: 100%;
-   padding: 20px;
+   padding: 50px 20px;
    /*padding-left: 60px;*/
-   background-color: var(--hex-cl);
+   /*background-color: var(--hex-cl);*/
 }
 .about-section h2{
    /*position: absolute;
@@ -581,15 +600,15 @@ body.open-nav .navigation .nav-bar .nav-btn{
    color: #fff;
 }
 .about{
-   padding: 10px 0;
+   padding: 15px 0;
 }
 .about p{
    font-size: 16px;
    text-align: center;
-   padding: 0 10px;
+   padding: 5px 10px;
    border-radius: 10px;
    color: #000;
-   background-color: rgba(223, 213, 255, 0.5);
+   background-color: rgba(223, 213, 255, 0.8);
 }
 .about p span{
    font-size: 40px;
@@ -615,7 +634,6 @@ body.open-nav .navigation .nav-bar .nav-btn{
    padding: 30px 10px;
   /* overflow-x: auto;
    position: relative;*/
-  
 }
 .skill-section h2{
    /*position: absolute;
@@ -708,11 +726,21 @@ body.open-nav .navigation .nav-bar .nav-btn{
    margin: 5px 0;
    padding: 10px;
    border-radius: 10px;
-   background-color: var(--nex-cl);
+}
+.project-section .projects ul li:nth-child(1){
+   background: rgba(234, 241, 252, 1);
+   color: #000;
+}
+.project-section .projects ul li:nth-child(2){
+   background: rgba(252, 234, 234, 1);
+   color: #000;
+}
+.project-section .projects ul li:nth-child(3){
+   background: rgba(252, 250, 234, 1);
+   color: #000;
 }
 .projects ul li h3, p{
    padding: 8px 0;
-   color: var(--text-cl);
 }
 @media(min-width: 600px){
    .project-section{
@@ -722,7 +750,89 @@ body.open-nav .navigation .nav-bar .nav-btn{
       width: 32%;
    }
 }
+/*-----------Contact section---------*/
+.contact-section{
+   padding: 10px;
+}
+.connect{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+   padding: 15px;
+   border-radius: 10px;
+   background-color: rgba(223, 213, 255, 0.8);
+   background-image:url('asset/contact.png');
+   background-position-x: -20px;
+   background-position-y: 60%;
+   background-repeat: no-repeat;
+   background-size: 200px;
+}
+.connect div{
+   text-align: center;
+   padding: 15px 0;
+   color: #000;
+}
+.connect div button{
+   width: 150px;
+   padding: 15px;
+   border: none;
+   border-radius: 10px;
+   font-size: 16px;
+   color: #fff;
+   background-color: var(--primary-cl);
+   border: none;
+   box-shadow: -3px -3px 7px rgba(102, 68, 215, 0.5),
+   3px 3px 5px rgba(102, 68, 215, 0.5);
+}
+.connect2{
+   text-align: center;
+   padding: 20px 0;
+   padding-top: 40px;
+   color: var(--text-cl);
+}
+.connect2 h4{
+   padding: 8px;
+}
+.connect2 h3{
+   font-weight: 300;
+}
+.connect2 p{
+   font-weight: lighter;
+}
+.connect2 .social{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 15px 0;
+}
+.connect2 .social span{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 35px;
+   height: 35px;
+   margin: 0 5px;
+   border-radius: 10px;
+   transition: 0.5s ease;
+   background-color: rgba(223, 213, 255, 0.8);;
+}
+.connect2 .social i{
+   font-size: 22px;
+   color: #000;
+   transition: 0.5s ease;
+}
+@media(min-width: 600px){
+   .contact-section{
+      padding: 20px 15%;
+   }
+}
 
+
+
+/*
 
 
 .space{
